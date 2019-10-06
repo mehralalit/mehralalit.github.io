@@ -1,7 +1,11 @@
-#tab-content p {
-    display: none;
+.mobile-text {
+    font-size: 1rem;
+    overflow: hidden;
+    max-width: 0;
+    transition: max-width 0.2s ease-out;
 }
 
-#tab-content p.is-active {
-    display: block;
+#mobile-icon {
+    margin-left: calc(-.375em - 1px);
+    margin-right: calc(-.375em - 1px);
 }

@@ -1,11 +1,15 @@
-$(document).ready(function() {
-    $('#tabs li').on('click', function() {
-      var tab = $(this).data('tab');
-  
-      $('#tabs li').removeClass('is-active');
-      $(this).addClass('is-active');
-  
-      $('#tab-content p').removeClass('is-active');
-      $('p[data-content="' + tab + '"]').addClass('is-active');
-    });
+window.onload = function(){
+  var mobile_button = document.getElementById("mobile-button");
+  mobile_button.addEventListener("click", function() {
+    var mobile_text = mobile_button.children[1];
+    if (mobile_text.style.maxWidth){
+      mobile_text.style.maxWidth = null;
+      mobile_text.style.visibility = "hidden";
+      mobile_text.style.paddingLeft = null;
+    } else {
+      mobile_text.style.visibility = null;
+      mobile_text.style.paddingLeft = 18 + "px";
+      mobile_text.style.maxWidth = mobile_text.scrollWidth + "px";
+    } 
   });
+};
